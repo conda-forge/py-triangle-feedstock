@@ -6,24 +6,24 @@
 # Using the name variable with the URL in line 14 is convenient
 # when copying and pasting from another recipe, but not really needed.
 {% set name = "py-triangle" %}
-{% set version = "20220202" %}
+{% set version = "20230923" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-   - url: https://github.com/drufat/triangle/archive/refs/tags/v{{ version }}.tar.gz
-     sha256: e975631b82538a9c008a34e415e52f1a60969f98d819fd7ca6ad7906352e33d1
-   - git_url: https://github.com/drufat/triangle-c
-     git_rev: 8b9e1046e5cddab1298d3204f10c93665836cf99 # Keep that in sync with triangle python package 
-     git_depth: 1
-     folder: c
-     
+  - url: https://github.com/drufat/triangle/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: 5fd7ff55c65601d6a1b8ac6485f413633c930685c4eaae950131f3a99868bc97
+  - git_url: https://github.com/drufat/triangle-c
+    git_rev: 8b9e1046e5cddab1298d3204f10c93665836cf99  # Keep that in sync with triangle python package 
+    git_depth: 1
+    folder: c
+
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -57,7 +57,7 @@ about:
     The latter can be generated with no small or large angles, 
     and are thus suitable for finite element analysis.
   license: "LGPL and Triangle"
-  license_file: 
+  license_file:
     - LICENSE
     - c/README
 
