@@ -305,4 +305,5 @@ Feedstock Maintainers
 * [@Hofer-Julian](https://github.com/Hofer-Julian/)
 * [@Huite](https://github.com/Huite/)
 * [@JoerivanEngelen](https://github.com/JoerivanEngelen/)
+* [@Manangka](https://github.com/Manangka/)
 
